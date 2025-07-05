@@ -7,8 +7,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Reserva {
 
     private int id;
-    private int usuarioId;
-    private int codEsta;
+    private String nombreUsuario;
+    private String apellidoUsuario;
+    private String numeroEstacionamiento;
     private String fecha;
     private String horaInicio;
     private String horaFin;
@@ -25,19 +26,27 @@ public class Reserva {
     }
 
     @XmlElement
-    public int getUsuarioId() {
-        return usuarioId;
+    public String getNombreUsuario() {
+        return nombreUsuario;
     }
-    public void setUsuarioId(int usuarioId) {
-        this.usuarioId = usuarioId;
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
     @XmlElement
-    public int getCodEsta() {
-        return codEsta;
+    public String getApellidoUsuario() {
+        return apellidoUsuario;
     }
-    public void setCodEsta(int codEsta) {
-        this.codEsta = codEsta;
+    public void setApellidoUsuario(String apellidoUsuario) {
+        this.apellidoUsuario = apellidoUsuario;
+    }
+
+    @XmlElement
+    public String getNumeroEstacionamiento() {
+        return numeroEstacionamiento;
+    }
+    public void setNumeroEstacionamiento(String numeroEstacionamiento) {
+        this.numeroEstacionamiento = numeroEstacionamiento;
     }
 
     @XmlElement
